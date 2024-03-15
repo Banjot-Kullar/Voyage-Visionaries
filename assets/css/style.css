@@ -799,6 +799,8 @@ address {
 }
 
 .copyright {
+  display: flex;
+  align-items: center;
   color: var(--gainsboro);
   font-size: var(--fs-5);
   margin-bottom: 10px;
@@ -807,10 +809,28 @@ address {
 .copyright a {
   color: inherit;
   display: inline-block;
+  align-items: center;
+  padding: 0 5px;
 }
 
 .copyright a:is(:hover, :focus) {
   color: var(--white);
+}
+
+.footer-bottom-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+}
+
+.footer-bottom-list > li {
+  position: relative;
+}
+
+.footer-bottom-list > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
 }
 
 .footer-bottom-list {
